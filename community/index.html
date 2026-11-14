@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community // MILGRAM</title>
+<link rel="stylesheet" href="../css/style.css?v=2">
+</head>
+<body>
+<header class="topbar">
+    <div class="logo">MILGRAM <span>// COMMUNITY</span></div>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <nav>
+        <a href="../index.html">HOME</a>
+        <a href="../prisoners/index.html">PRISONERS</a>
+        <a href="../trials/trial1.html">TRIALS</a>
+        <a href="../theories/index.html">THEORIES</a>
+        <a href="../verdicts/index.html">VERDICTS</a>
+        <a class="active" href="index.html">COMMUNITY</a>
+    </nav>
+</header>
+
+<main class="page community-page">
+    <div class="page-heading">
+        <p class="system-label">[ COMMUNITY JUDGMENT ARCHIVE ]</p>
+        <h1>THE COMMUNITY</h1>
+        <p>This archive is where readers can leave their own interpretations of the prisoners, their crimes, and the Trials.
+
+The goal is not to decide who is objectively right. MILGRAM is built around judgment, and different people can reach different conclusions from the same evidence.
+
+Submit a theory, verdict, analysis, question, or discussion. Your entry will be added to the shared archive and can be viewed from another device once the database is connected.</p>
+    </div>
+
+    <section class="community-layout">
+        <div class="community-submit analysis-panel">
+            <div class="panel-kicker">[ SUBMIT A JUDGMENT ]</div>
+            <h2>ADD TO THE ARCHIVE</h2>
+            <p class="form-note">Keep your post respectful and focused on the character, evidence, or interpretation you are discussing.</p>
+
+            <form id="community-form">
+                <div class="form-grid">
+                    <label>NAME
+                        <input id="post-name" type="text" maxlength="100" placeholder="Your name / alias" required>
+                    </label>
+                    <label>POST TYPE
+                        <select id="post-type" required>
+                            <option value="">SELECT TYPE</option>
+                            <option value="THEORY">THEORY</option>
+                            <option value="VERDICT">VERDICT</option>
+                            <option value="ANALYSIS">ANALYSIS</option>
+                            <option value="QUESTION">QUESTION</option>
+                            <option value="DISCUSSION">DISCUSSION</option>
+                        </select>
+                    </label>
+                    <label>PRISONER
+                        <select id="post-prisoner" required>
+                            <option value="">SELECT PRISONER</option>
+                            <option>001 — HARUKA SAKURAI</option>
+                            <option>002 — YUNO KASHIKI</option>
+                            <option>003 — FUUTA KAJIYAMA</option>
+                            <option>004 — MUU KUSONOKI</option>
+                            <option>005 — SHIDOU KIRISAKI</option>
+                            <option>006 — MAHIRU SHIINA</option>
+                            <option>007 — KAZUI MUKUHARA</option>
+                            <option>008 — AMANE MOMOSE</option>
+                            <option>009 — MIKOTO KAYANO</option>
+                            <option>010 — KOTOKO YUZURIHA</option>
+                            <option>ALL PRISONERS</option>
+                        </select>
+                    </label>
+                    <label>TRIAL
+                        <select id="post-trial" required>
+                            <option value="">SELECT TRIAL</option>
+                            <option>TRIAL 1</option>
+                            <option>TRIAL 2</option>
+                            <option>TRIAL 3</option>
+                            <option>ALL TRIALS</option>
+                        </select>
+                    </label>
+                </div>
+                <label>THOUGHTS / THEORY / VERDICT
+                    <textarea id="post-message" maxlength="1500" rows="8" placeholder="Write your interpretation here..." required></textarea>
+                </label>
+                <div class="form-bottom">
+                    <span id="community-status" class="community-status">DATABASE STATUS // WAITING FOR FIREBASE CONFIG</span>
+                    <button class="btn submit-btn" type="submit">SUBMIT TO ARCHIVE →</button>
+                </div>
+            </form>
+        </div>
+
+        <section class="community-feed">
+            <div class="feed-header">
+                <div>
+                    <p class="system-label">[ LIVE RECORDS ]</p>
+                    <h2>COMMUNITY ENTRIES</h2>
+                </div>
+                <span class="live-dot">● LIVE</span>
+            </div>
+
+            <div class="community-filters">
+                <span class="filter-label">FILTER</span>
+                <button type="button" class="filter-btn selected" data-community-filter="ALL">ALL</button>
+                <button type="button" class="filter-btn" data-community-filter="THEORY">THEORY</button>
+                <button type="button" class="filter-btn" data-community-filter="VERDICT">VERDICT</button>
+                <button type="button" class="filter-btn" data-community-filter="ANALYSIS">ANALYSIS</button>
+                <button type="button" class="filter-btn" data-community-filter="QUESTION">QUESTION</button>
+                <button type="button" class="filter-btn" data-community-filter="DISCUSSION">DISCUSSION</button>
+            </div>
+
+            <div id="community-list"></div>
+            <p id="community-empty" class="filter-empty">NO COMMUNITY ENTRIES YET. BE THE FIRST TO LEAVE A JUDGMENT.</p>
+        </section>
+    </section>
+</main>
+
+<footer>
+    <p>MILGRAM // JUDGMENT ARCHIVE</p>
+    <p>Unofficial fan analysis project</p>
+</footer>
+
+<script src="../js/script.js"></script>
+<script type="module" src="../js/community.js"></script>
+</body>
+</html>
